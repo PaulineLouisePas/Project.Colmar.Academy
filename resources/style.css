@@ -1,0 +1,100 @@
+/* NOTE: Universal style */
+@font-face {
+    font-family: 'Krub';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Krub Light'), local('Krub-Light'), url(https://fonts.gstatic.com/s/krub/v1/sZlEdRyC6CRYZuo4GLZyRg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'Krub';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Krub Regular'), local('Krub-Regular'), url(https://fonts.gstatic.com/s/krub/v1/sZlLdRyC6CRYbkEaDQ.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+    font-family: 'Krub';
+    font-style: normal;
+    font-weight: 600;
+    src: local('Krub SemiBold'), local('Krub-SemiBold'), url(https://fonts.gstatic.com/s/krub/v1/sZlEdRyC6CRYZp4-GLZyRg.woff2) format('woff2');
+    unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+  }
+
+  @font-face {
+  font-family: 'Krub';
+  font-style: normal;
+  font-weight: 700;
+  src: local('Krub Bold'), local('Krub-Bold'), url(https://fonts.gstatic.com/s/krub/v1/sZlEdRyC6CRYZvo_GLZyRg.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+html {
+  font-family: 'Krub' , sans-serif;
+  font-size: 16px;
+}
+
+/* NOTE: Homebar */
+.topbar {
+  width: 100%;
+  height: 4rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: green;
+}
+
+.topbar .home {
+  display: flex;
+  align-items: center;
+  margin-left: 1.5rem;
+}
+
+.home img {
+  height: 3.5rem;
+}
+
+.home span {
+  font-size: 2rem;
+  font-weight: 600;
+  padding-left: 1rem;
+}
+
+header .nav {
+  display: flex;
+  margin-right: 1.5rem;
+}
+
+header .nav a{
+  color: black;
+  text-decoration: none;
+  padding-left: 1rem;
+  font-weight: 600;
+}
+
+/* NOTE: Bannerbox */
+.bannerbox {
+  display: flex;
+  background-color: lightgreen;
+}
+
+.bannerbox .bannerimg {
+  width: 50%;
+  height: auto;
+}
+
+.bannerimg img {
+  width: 90%;
+  height: auto;
+  padding: 2.5rem 2rem;
+}
+
+.bannerbox .sign-in {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 50%;
+}
