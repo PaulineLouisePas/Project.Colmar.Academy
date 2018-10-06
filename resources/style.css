@@ -59,14 +59,20 @@ Light: rgb(240,255,240) or honeydew
 Mediumligtht: rgb(253, 253, 169)
   */
 
-  /* NOTE: HIDE CONTENT MOBILE SCREEN */
+  /* NOTE: HIDE CONTENT MOBILE SCREEN or DESKTOP SCREEN*/
 
   @media screen and (max-width: 470px){
-    .hidemobile {
+    #hidemobile {
       display: none;
     }
   }
 
+  @media screen and (min-width: 471px) {
+    #hidedesktop {
+      display: none;
+    }
+
+  }
 /* NOTE: Homebar */
 .topbar {
   width: 100%;
@@ -105,6 +111,16 @@ header .nav a{
   font-weight: 600;
 }
 
+.navmobile {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: auto;
+  padding: 0rem 1rem;
+}
+
+
 /* NOTE: Bannerbox */
 .bannerbox {
   display: flex;
@@ -141,6 +157,39 @@ header .nav a{
   background-color: rgb(4,4,0);
   color: rgb(240,255,240);
   padding: 1rem 2.5rem;
+}
+
+@media screen and (max-width: 470px) {
+    .bannerbox {
+      flex-direction: column;
+    }
+
+    .bannerbox .bannerimg {
+      width: 100%;
+      height: auto;
+    }
+
+    .bannerimg img {
+      width: 100%;
+      padding: 0rem;
+    }
+
+    .bannerbox .sign-in {
+      width: 100%;
+      padding: 2rem 1rem;
+    }
+
+    .sign-in h1 {
+      padding-bottom: 2rem;
+      padding-left: 1rem;
+      text-align: left;
+    }
+
+    .sign-in h2 {
+      padding-bottom: 1.5rem;
+      padding-left: 1rem;
+      text-align: left;
+    }
 }
 
 /* NOTE: informationbox */
@@ -189,7 +238,7 @@ header .nav a{
 .orientationbox img {
   width: 25%;
   height: 25%;
-  padding: 1.25rem
+  padding: 1.25rem;
 }
 
 .infotext {
@@ -204,6 +253,31 @@ header .nav a{
 .infotext a {
   color: dark;
   text-decoration: none;
+}
+
+@media screen and (max-width:470px) {
+  .infobox {
+    height: 100%;
+    padding: 1rem 0rem;
+  }
+  .sideinfobox {
+    width: 100%;
+  }
+
+  .orientationbox {
+    flex-direction: column;
+  }
+
+  .orientationbox img {
+    width: 100%;
+    height: auto;
+    padding: 2rem;
+  }
+
+  .orientationbox .infotext {
+    text-align: left;
+    padding: 1rem;
+  }
 }
 
 /* NOTE: COURSEBOX */
@@ -245,6 +319,24 @@ header .nav a{
   text-align: left;
 }
 
+.courselist {
+  width: 100%;
+  height: auto;
+  padding: 1rem 1rem 2rem 1rem;
+}
+
+.courselist ul li {
+  width: 95%;
+  padding: 1rem 0rem 1.5rem 1rem;
+  margin-bottom: 0.5rem;
+  background-color: lightgrey;
+  font-size: 1.5rem;
+}
+
+.courselist ul li a {
+  text-decoration: none;
+  color: black;
+}
 /* NOTE: THESISBOX */
 
 .thesisbox {
