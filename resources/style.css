@@ -34,45 +34,34 @@
 html {
   font-family: 'Krub' , sans-serif;
   font-size: 16px;
-  color: rgb(4, 4, 0);
+  color: rgb(0, 15,64);
   text-align: center;
 }
 
 h1 {
   font-size: 2rem;
   font-weight: bold;
-  color: Dark;
 }
 
 h2 {
   font-size: 1.5rem;
   font-weight: 600;
-  color: Mediumdark;
 }
 
 /* NOTE: Colors:
-Dark: rgb(4,4,0)
-Mediumdark: rgb(87, 87, 0)
-Base: rgb(170, 170, 57)
-Mediumligtht: rgb(253, 253, 169)
-Light: rgb(240,255,240) or honeydew
-Mediumligtht: rgb(253, 253, 169)
+Blue/grey tones:
+Dark: rgb(0, 15,64)
+Medium: rgb(50, 96,127)
+light: rgb(205, 207,229)
+Yellow tones:
+Bright: rgb(170, 170, 57)
+Pastel: rgb(255, 254, 199)
   */
 
-  /* NOTE: HIDE CONTENT MOBILE SCREEN or DESKTOP SCREEN*/
+h3, h4, p, span, a {
+  color: rgb(50, 96,127);
+}
 
-  @media screen and (max-width: 470px){
-    #hidemobile {
-      display: none;
-    }
-  }
-
-  @media screen and (min-width: 471px) {
-    #hidedesktop {
-      display: none;
-    }
-
-  }
 /* NOTE: Homebar */
 .topbar {
   width: 100%;
@@ -89,6 +78,11 @@ Mediumligtht: rgb(253, 253, 169)
   margin-left: 1.5rem;
 }
 
+@media screen and (max-width: 470px){
+  .topbar .home {
+    display: none;
+  }
+}
 .home img {
   height: 3.5rem;
 }
@@ -97,18 +91,33 @@ Mediumligtht: rgb(253, 253, 169)
   font-size: 2rem;
   font-weight: 600;
   padding-left: 1rem;
+  color: rgb(0, 15,64);
 }
 
-header .nav {
+header nav {
   display: flex;
   margin-right: 1.5rem;
 }
 
-header .nav a{
+@media screen and (max-width: 470px){
+  header nav {
+    display: none;
+  }
+}
+
+header nav a{
   color: black;
   text-decoration: none;
   padding-left: 1rem;
   font-weight: 600;
+}
+
+header nav a:hover{
+  transition-property: all;
+  transition-duration: 0.3s;
+  transition-delay: 0.2s;
+  font-size: 1.25rem;
+  padding-bottom: 0.5rem;
 }
 
 .navmobile {
@@ -120,11 +129,17 @@ header .nav a{
   padding: 0rem 1rem;
 }
 
+@media screen and (min-width: 471px) {
+  .navmobile{
+    display: none;
+  }
+}
+
 
 /* NOTE: Bannerbox */
 .bannerbox {
   display: flex;
-  background-color: rgb(253, 253, 169);
+  background-color: rgb(255, 254, 199);
 }
 
 .bannerbox .bannerimg {
@@ -148,15 +163,24 @@ header .nav a{
 
 .sign-in h2 {
   padding: 1.25rem;
+  color: rgb(50, 96,127);
 }
 
 .sign-in a {
   font-size: 1.25rem;
   text-decoration: none;
   font-weight: bold;
-  background-color: rgb(4,4,0);
-  color: rgb(240,255,240);
+  background-color: rgb(170, 170, 57);
+  color: rgb(0, 15,64);
   padding: 1rem 2.5rem;
+}
+
+.sign-in a:hover {
+  transition-property: padding;
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+  padding: 1rem 5rem;
+  ;
 }
 
 @media screen and (max-width: 470px) {
@@ -198,7 +222,7 @@ header .nav a{
   display: flex;
   width: 100%;
   height: 500px;
-  border-bottom: 1px solid lightgrey;
+  border-bottom: 1px solid rgb(170, 170, 57);
 }
 
 .headinfobox {
@@ -208,9 +232,14 @@ header .nav a{
   align-items: center;
   width: 60%;
   padding: 1.5rem 2rem;
-  border-right: 1px solid lightgrey;
+  border-right: 1px solid rgb(170, 170, 57);
 }
 
+@media screen and (max-width: 470px){
+  .headinfobox {
+    display: none;
+  }
+}
 .headinfobox img {
   width: 80%;
   height: 80%;
@@ -241,6 +270,12 @@ header .nav a{
   padding: 1.25rem;
 }
 
+@media screen and (max-width: 470px){
+  .orientationbox .hidemobile {
+    display: none;
+  }
+}
+
 .infotext {
   display: flex;
   flex-direction: column;
@@ -251,8 +286,16 @@ header .nav a{
 }
 
 .infotext a {
-  color: dark;
   text-decoration: none;
+}
+
+.infotext a:hover {
+  transition-property: all;
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+  font-weight: bold;
+  color: rgb(0, 15,64);
+  font-size: 1.25rem;
 }
 
 @media screen and (max-width:470px) {
@@ -280,6 +323,12 @@ header .nav a{
   }
 }
 
+@media screen and (min-width: 471px) {
+  .orientationbox .hidedesktop{
+    display: none;
+  }
+}
+
 /* NOTE: COURSEBOX */
 
 .coursebox {
@@ -297,15 +346,27 @@ header .nav a{
   padding: 0rem 3.5rem;
 }
 
+@media screen and (max-width: 470px){
+  .linebox {
+    display: none;
+  }
+}
+
 .courseinfobox {
   display: flex;
   flex-direction: column;
   margin: 1rem;
   width: 33%;
   height: 400px;
-  background-color: lightyellow;
+  background-color: rgb(255, 254, 199);
 }
 
+.courseinfobox:hover {
+  transition-property: background-color;
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+  background-color: rgb(170, 170, 57);
+}
 .courseinfobox img{
   width: 100%;
   height: auto;
@@ -319,18 +380,35 @@ header .nav a{
   text-align: left;
 }
 
+/* NOTE: FOR MOBILE CONTENT */
+
 .courselist {
   width: 100%;
   height: auto;
-  padding: 1rem 1rem 2rem 1rem;
+  padding: 0rem 1rem 2rem 0rem;
+}
+
+@media screen and (min-width: 471px) {
+  .courselist{
+    display: none;
+  }
 }
 
 .courselist ul li {
-  width: 95%;
-  padding: 1rem 0rem 1.5rem 1rem;
+  width: 100%;
+  padding: 1rem 0rem 1.5rem 0rem;
   margin-bottom: 0.5rem;
-  background-color: lightgrey;
+  background-color: rgb(255, 254, 199);
+  font-size: 1.25rem;
+}
+
+.courselist ul li:hover {
+  transition-property: all;
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+  background-color: rgb(170, 170, 57);
   font-size: 1.5rem;
+
 }
 
 .courselist ul li a {
@@ -341,7 +419,7 @@ header .nav a{
 
 .thesisbox {
   display: flex;
-  border-top: 1px solid lightgrey;
+  border-top: 1px solid rgb(170, 170, 57);
 }
 
 .videobox {
@@ -351,7 +429,13 @@ header .nav a{
   width: 60%;
   height: auto;
   padding: 2rem 1.5rem;
-  border-right: 1px solid lightgrey;
+  border-right: 1px solid rgb(170, 170, 57);
+}
+
+@media screen and (max-width: 470px){
+  .videobox .hidemobile {
+    display: none;
+  }
 }
 
 .videotext h1{
@@ -364,6 +448,12 @@ header .nav a{
   align-items: flex-start;
   width: 40%;
   padding: 2rem 1.5rem 2rem 0rem;
+}
+
+@media screen and (max-width: 470px){
+  .articlebox {
+    display: none;
+  }
 }
 
 .articlelink {
@@ -385,6 +475,33 @@ header .nav a{
   text-align: left;
 }
 
+@media screen and (max-width: 470px) {
+    .thesisbox {
+      display: flex;
+      flex-direction: column;
+      padding-top: 1rem;
+      padding-bottom: 0.5rem;
+      border-right: 0px solid rgb(170, 170, 57);
+    }
+
+    .titleboxmobile {
+      display: flex;
+      justify-content: center;
+      padding: 1rem 0rem;
+    }
+
+    .videobox {
+      width: 100%;
+      padding: 1rem 0rem;
+    }
+}
+
+@media screen and (min-width: 471px) {
+  .titleboxmobile, .videobox .hidedesktop{
+    display: none;
+  }
+}
+
 /* NOTE: FOOTERBOX */
 
 footer {
@@ -392,9 +509,28 @@ footer {
   justify-content: space-between;
   padding: 1rem 1.5rem 3rem 1.5rem;
   border-top: 1px solid lightgrey;
+  background-color: rgb(170, 170, 57);
 }
 
-footer .nav a{
-  color: black;
+footer nav ul {
+  display: flex;
+  flex-direction: row;
+}
+
+@media screen and (max-width: 470px){
+  footer nav {
+    display: none;
+  }
+}
+
+footer nav li a{
+  color: rgb(50, 96,127);
   text-decoration: none;
+  padding: 1rem;
+}
+
+@media screen and (max-width: 470px) {
+  footer {
+    padding: 1rem;
+  }
 }
